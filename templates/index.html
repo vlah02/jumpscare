@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}" />
+    <link rel="preload" href="{{ url_for('static', filename='video.mp4') }}" as="video" />
+    <meta
+      name="og:description"
+      content="Anything your heart desires, you can have it. Tubals."
+    />
+    <meta name="og:title" content="Tubals" />
+    <meta name="og:url" content="https://tubals.tech" />
+    <meta name="og:type" content="website" />
+    <meta name="og:image" content="https://tubals.tech/lunch.jpg" />
+    <meta name="theme-color" content="#00ffff" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay">
+      <div class="overlay-body">
+        <h1>We use cookies</h1>
+        <p>
+          This website uses cookies to ensure that you get the best experience
+          on our website.
+        </p>
+        <button>Accept</button>
+        <button>Decline</button>
+      </div>
+    </div>
+    <div class="scare">
+      <video id="video" class="video" src="{{ url_for('static', filename='video.mp4') }}" loop></video>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
